@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Theme Toggle Switch -->
+  <div class="mode-toggle">
+    <label class="switch">
+      <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- Calculator -->
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+      <button class="btn-red" onclick="clearDisplay()">C</button>
+      <button class="btn-blue" onclick="append('/')">/</button>
+      <button class="btn-blue" onclick="append('*')">*</button>
+      <button class="btn-blue" onclick="append('-')">-</button>
+
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button class="btn-blue" onclick="append('+')">+</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button class="btn-green equal" onclick="calculate()">=</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+
+      <button class="zero-btn" onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
